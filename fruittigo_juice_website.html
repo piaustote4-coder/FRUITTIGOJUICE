@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#047857">
+<meta name="description" content="Fruittigo Juice — jus buah segar. Lihat menu dan pesan melalui WhatsApp.">
+<title>Fruittigo Juice - Jus Buah Segar</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{green:'#4CAF50',darkgreen:'#2E7D32',orange:'#FF9800',cream:'#FFFBEA'}},fontFamily:{poppins:['Poppins','sans-serif']}}}}
+</script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:Poppins,sans-serif}
+.bg-pattern{background-color:#FFFDF7;background-image:radial-gradient(#81c784 .5px,transparent .5px),radial-gradient(#ffb74d .5px,#FFFDF7 .5px);background-size:20px 20px;background-position:0 0,10px 10px}
+</style>
+</head>
+<body class="bg-pattern text-gray-800">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-orange-100">
+ <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+  <a href="#" class="flex items-center gap-3"><div class="w-12 h-12 rounded-full bg-gradient-to-tr from-orange-400 to-green-500 flex items-center justify-center text-2xl shadow">🍊</div><div><span class="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-orange-500 to-red-500">FRUITTIGO</span><span class="block text-xs font-semibold tracking-widest text-amber-800 -mt-1">JUICE</span></div></a>
+  <nav class="hidden md:flex gap-7 font-medium text-gray-600"><a href="#tentang">Tentang Kami</a><a href="#promo">Pre-Order</a><a href="#menu-segar">Menu Jus</a><a href="#order-builder">Cara Pesan</a></nav>
+  <a href="https://wa.me/6283879816693" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold"><i class="fab fa-whatsapp"></i> Pesan WhatsApp</a>
+  <button id="menu-btn" aria-label="Buka menu" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+ </div>
+ <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-4 space-y-3"><a class="block" href="#tentang">Tentang Kami</a><a class="block" href="#promo">Promo Pre-Order</a><a class="block" href="#menu-segar">Menu Jus</a><a class="block" href="#order-builder">Pesan Sekarang</a><a class="block text-emerald-700 font-bold" href="https://wa.me/6283879816693">Hubungi WhatsApp</a></div>
+</header>
+
+<section class="py-14 lg:py-24">
+ <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+  <div class="space-y-6 text-center lg:text-left">
+   <span class="inline-block bg-orange-100 border border-orange-300 rounded-full px-4 py-2 text-orange-800 text-sm font-semibold">✨ Jus buah segar setiap hari</span>
+   <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">Kesegaran Alami <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-orange-500 to-amber-500">Dalam Setiap Tegukan!</span></h1>
+   <p class="text-gray-600 text-lg">Nikmati jus Fruittigo yang dibuat segar berdasarkan pesanan. Pilih rasa favoritmu dan pesan dengan mudah melalui WhatsApp.</p>
+   <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><a href="#menu-segar" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-8 py-4 rounded-2xl shadow-lg">🛒 Lihat Menu</a><a href="https://wa.me/6283879816693" target="_blank" rel="noopener" class="border-2 border-emerald-500 text-emerald-700 px-8 py-4 rounded-2xl font-bold"><i class="fab fa-whatsapp mr-2"></i>Chat WhatsApp</a></div>
+   <div class="pt-3 flex items-center justify-center lg:justify-start gap-3 text-gray-600"><i class="fab fa-instagram text-2xl text-pink-600"></i><a href="https://instagram.com/fruittigo" target="_blank" rel="noopener">@fruittigo</a><span>|</span><i class="fas fa-phone text-emerald-600"></i><span>0838-7981-6693</span></div>
+  </div>
+  <div class="bg-white/80 p-6 rounded-3xl border border-white shadow-xl"><div class="grid grid-cols-2 gap-4">
+   <div class="bg-emerald-50 p-5 rounded-2xl text-center"><div class="text-5xl mb-2">🥑</div><b>Jus Alpukat</b><p class="text-emerald-700 font-bold mt-2">Rp 15.000</p></div>
+   <div class="bg-rose-50 p-5 rounded-2xl text-center"><div class="text-5xl mb-2">🍉</div><b>Jus Semangka</b><p class="text-rose-700 font-bold mt-2">Rp 10.000</p></div>
+   <div class="bg-amber-50 p-5 rounded-2xl text-center"><div class="text-5xl mb-2">🍊</div><b>Jus Jeruk</b><p class="text-amber-700 font-bold mt-2">Rp 12.000</p></div>
+   <div class="bg-fuchsia-50 p-5 rounded-2xl text-center"><div class="text-5xl mb-2">🥭</div><b>Jus Mangga</b><p class="text-fuchsia-700 font-bold mt-2">Rp 12.000</p></div>
+  </div></div>
+ </div>
+</section>
+
+<section id="tentang" class="py-12 bg-white border-y border-amber-100"><div class="max-w-6xl mx-auto px-4 text-center"><h2 class="text-3xl font-extrabold">Mengapa Memilih <span class="text-emerald-600">Fruittigo?</span></h2><p class="text-gray-600 mt-3">Pilihan jus segar untuk menemani aktivitasmu.</p><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+ <div class="bg-emerald-50 p-6 rounded-2xl"><div class="text-4xl">🍓</div><h3 class="font-bold mt-3">Buah Pilihan</h3><p class="text-sm text-gray-600 mt-2">Rasa buah yang segar dan nikmat.</p></div>
+ <div class="bg-amber-50 p-6 rounded-2xl"><div class="text-4xl">🌿</div><h3 class="font-bold mt-3">Dibuat Saat Dipesan</h3><p class="text-sm text-gray-600 mt-2">Jus dibuat agar dinikmati dalam keadaan segar.</p></div>
+ <div class="bg-orange-50 p-6 rounded-2xl"><div class="text-4xl">✨</div><h3 class="font-bold mt-3">Banyak Pilihan</h3><p class="text-sm text-gray-600 mt-2">Tersedia aneka varian buah favorit.</p></div>
+ <div class="bg-red-50 p-6 rounded-2xl"><div class="text-4xl">🧃</div><h3 class="font-bold mt-3">Praktis</h3><p class="text-sm text-gray-600 mt-2">Pilih menu lalu kirim pesanan melalui WhatsApp.</p></div>
+ </div></div></section>
+
+<section id="promo" class="py-14"><div class="max-w-6xl mx-auto px-4"><div class="rounded-3xl p-8 text-center text-white bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 shadow-xl"><span class="bg-white text-red-600 font-bold px-4 py-2 rounded-full text-sm">MENU FAVORIT</span><h2 class="text-3xl sm:text-4xl font-black mt-5">PILIHAN SPESIAL FRUITTIGO</h2><p class="mt-3">Pesan favoritmu untuk dinikmati saat segar!</p></div></div></section>
+
+<section id="menu-segar" class="py-14 bg-emerald-900 text-white"><div class="max-w-5xl mx-auto px-4"><div class="text-center mb-10"><span class="text-amber-300 font-bold uppercase text-xs tracking-wider">Varian Single Fruit</span><h2 class="text-3xl font-extrabold mt-2">MENU JUS SEGAR</h2><p class="text-emerald-200 mt-2">Pilih jus favoritmu, lalu tambahkan ke pesanan.</p></div><div id="menu-list" class="grid gap-3"></div></div></section>
+
+<section id="order-builder" class="py-16"><div class="max-w-3xl mx-auto px-4"><div class="bg-white rounded-3xl border border-orange-100 shadow-xl p-6 sm:p-10"><div class="text-center mb-8"><span class="text-orange-500 font-bold uppercase text-xs">Form Pemesanan</span><h2 class="text-3xl font-extrabold mt-2">Buat Pesanan Anda</h2><p class="text-gray-500 text-sm mt-2">Pesanan akan disiapkan sebagai pesan WhatsApp.</p></div><form id="orderForm" class="space-y-5"><div class="grid sm:grid-cols-2 gap-4"><label class="block text-sm font-semibold">Nama Pemesan<input id="custName" required class="block w-full mt-2 px-4 py-3 rounded-xl border border-gray-200" placeholder="Nama kamu"></label><label class="block text-sm font-semibold">Catatan (opsional)<input id="custNotes" class="block w-full mt-2 px-4 py-3 rounded-xl border border-gray-200" placeholder="Misalnya: sedikit gula"></label></div><div><label class="font-semibold text-sm">Keranjang Pesanan</label><div id="cartList" class="bg-amber-50 rounded-2xl p-4 mt-2 border border-amber-100"><p id="emptyCartMsg" class="text-center text-gray-400 text-sm">Belum ada item. Tambahkan menu di atas.</p><div id="cartItems" class="space-y-2"></div></div></div><div class="flex justify-between items-center border-t pt-4"><span class="font-semibold text-gray-600">Total Estimasi</span><strong id="totalPrice" class="text-2xl text-emerald-600">Rp 0</strong></div><button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-4 rounded-2xl text-lg" type="submit"><i class="fab fa-whatsapp mr-2"></i>Kirim Pesanan ke WhatsApp</button></form></div></div></section>
+
+<footer id="pesan" class="bg-gray-900 text-white py-10"><div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8"><div><div class="text-2xl font-black">🍊 FRUITTIGO</div><p class="text-gray-400 text-sm mt-3">Jus buah segar untuk menemani harimu.</p></div><div><h3 class="font-bold text-amber-400 mb-3">Kontak & Pemesanan</h3><p><i class="fab fa-whatsapp text-emerald-400 mr-2"></i><a href="https://wa.me/6283879816693">0838-7981-6693</a></p><p class="mt-2"><i class="fab fa-instagram text-pink-400 mr-2"></i><a href="https://instagram.com/fruittigo">@fruittigo</a></p></div><div><h3 class="font-bold text-amber-400 mb-3">Jam Operasional</h3><p class="text-gray-300 text-sm">Silakan hubungi kami untuk informasi jam buka dan ketersediaan menu.</p></div></div><div class="text-center text-xs text-gray-500 mt-8">© 2026 Fruittigo Juice. All rights reserved.</div></footer>
+
+<script>
+const products=[
+{name:'Jus Alpukat',price:15000,icon:'🥑'},
+{name:'Jus Semangka',price:10000,icon:'🍉'},
+{name:'Jus Jeruk',price:12000,icon:'🍊'},
+{name:'Jus Melon',price:13000,icon:'🍈'},
+{name:'Jus Buah Naga',price:12000,icon:'🐉'},
+{name:'Jus Wortel',price:8000,icon:'🥕'},
+{name:'Jus Mangga',price:12000,icon:'🥭'}
+];
+const rupiah=n=>'Rp '+n.toLocaleString('id-ID');
+const menuList=document.getElementById('menu-list');
+products.forEach((p,i)=>{const row=document.createElement('div');row.className='flex flex-wrap items-center justify-between gap-3 p-4 rounded-xl bg-emerald-800/70 border border-emerald-700';row.innerHTML=`<div class="flex items-center gap-3"><span class="text-3xl">${p.icon}</span><span class="font-semibold">${p.name}</span></div><div class="flex items-center gap-3"><strong class="text-amber-300">${rupiah(p.price)}</strong><button type="button" class="add-btn bg-amber-400 hover:bg-amber-500 text-emerald-950 px-3 py-2 rounded-lg text-sm font-bold">+ Tambah</button></div>`;row.querySelector('button').addEventListener('click',()=>addToCart(p.name,p.price));menuList.appendChild(row)});
+let cart=[];
+function addToCart(name,price){let item=cart.find(x=>x.name===name);if(item)item.qty++;else cart.push({name,price,qty:1});updateCart();if(innerWidth<768)document.getElementById('order-builder').scrollIntoView({behavior:'smooth'});}
+function updateQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);updateCart();}
+function updateCart(){const box=document.getElementById('cartItems');box.innerHTML='';document.getElementById('emptyCartMsg').classList.toggle('hidden',cart.length>0);let total=0;cart.forEach((item,i)=>{total+=item.price*item.qty;const row=document.createElement('div');row.className='flex justify-between items-center bg-white p-3 rounded-xl border border-amber-200 gap-3';row.innerHTML=`<div><p class="font-bold text-sm">${item.name}</p><p class="text-xs text-emerald-600">${rupiah(item.price)} × ${item.qty}</p></div><div class="flex items-center gap-2"><button type="button" class="minus w-8 h-8 rounded bg-gray-100 font-bold" aria-label="Kurangi">−</button><span class="font-bold">${item.qty}</span><button type="button" class="plus w-8 h-8 rounded bg-amber-400 font-bold" aria-label="Tambah">+</button></div>`;row.querySelector('.minus').onclick=()=>updateQty(i,-1);row.querySelector('.plus').onclick=()=>updateQty(i,1);box.appendChild(row)});document.getElementById('totalPrice').textContent=rupiah(total);}
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();if(!cart.length){alert('Silakan pilih minimal satu menu terlebih dahulu.');return;}const name=document.getElementById('custName').value.trim(),notes=document.getElementById('custNotes').value.trim();let total=cart.reduce((s,x)=>s+x.price*x.qty,0);let msg=`Halo Fruittigo Juice! 🍹%0ASaya mau pesan jus:%0A%0A👤 Nama: ${name}%0A`;cart.forEach((x,i)=>msg+=`${i+1}. ${x.name} (${x.qty}x) = ${rupiah(x.price*x.qty)}%0A`);msg+=`%0A💰 Total: ${rupiah(total)}%0A`;if(notes)msg+=`📝 Catatan: ${notes}%0A`;msg+='Mohon konfirmasi pesanan saya. Terima kasih!';window.open('https://wa.me/6283879816693?text='+encodeURIComponent(decodeURIComponent(msg)),'_blank','noopener');});
+document.getElementById('menu-btn').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('hidden')));
+</script>
+</body>
+</html>
